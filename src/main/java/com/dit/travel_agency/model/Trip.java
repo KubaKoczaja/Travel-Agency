@@ -45,5 +45,5 @@ public class Trip {
     private Integer numberOfAdults;
     private Integer numberOfChildren;
     private Boolean isPromoted;
-    private Catering catering;
+    private String catering;
 }
