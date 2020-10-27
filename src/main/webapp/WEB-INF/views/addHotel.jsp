@@ -22,7 +22,7 @@
                         <div class="form-group row">
                             <label for="inputHotelName" class="col-sm-2 col-form-label">Nazwa hotelu</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="inputHotelName" placeholder="Nazwa hotelu">
+                                <input type="text" class="form-control" id="inputHotelName" name="hotelName" placeholder="Nazwa hotelu">
                             </div>
                         </div>
                         <div class="row">
@@ -34,9 +34,12 @@
                                 </select>
                             </div>
                             <div class="form-group col-md-2">
-                                <select id="inputCity" class="form-control">
-                                    <option selected>Wybierz miasto</option>
-                                    <option>...</option>
+                                <select id="inputCity" class="form-control" name="city.id">
+                                    <option hidden>wybierz miasto</option>
+                                        <c:forEach items="${cities}" var="city">
+                                            <option value="${city.id}">${city.cityName}</option>
+                                        </c:forEach>
+<%--                                    <option>...</option>--%>
                                 </select>
                             </div>
                         </div>

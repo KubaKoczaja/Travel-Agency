@@ -4,8 +4,6 @@ import com.dit.travel_agency.model.Hotel;
 import com.dit.travel_agency.repository.HotelRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class HotelService {
     private final HotelRepository hotelRepository;
@@ -14,7 +12,7 @@ public class HotelService {
         this.hotelRepository = hotelRepository;
     }
 
-    public List<Hotel> getHotelList() {
+    public Iterable<Hotel> getHotelList() {
         return hotelRepository.findAll();
     }
 
