@@ -8182,6 +8182,10 @@ License - nucleoapp.com/license/
   .presentation-page .section-content .image-container .area-img {
     max-width: 170px !important;
   }
+
+  .opacity {
+    opacity: 0.9;
+  }
 }
 
 /*# sourceMappingURL=kit-free.css.map */

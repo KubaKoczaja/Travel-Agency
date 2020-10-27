@@ -36,7 +36,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href='<c:url value="#"/>'>Profil</a>
-                        <a href='<c:url value="#"/>' class="dropdown-item text-danger">Dodaj hotel</a>
+                        <a href='<c:url value="/addHotel"/>' class="dropdown-item text-danger">Dodaj hotel</a>
                     </div>
                 </li>
 

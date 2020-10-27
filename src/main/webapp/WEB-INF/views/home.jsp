@@ -39,7 +39,8 @@
                                                 <span class="glyphicon glyphicon-calendar"><i class="fa fa-calendar"></i></span>
                                             </span>
                                         </div>
-                                        <input type="text" class="form-control datetimepicker" placeholder="27/03/2019" />
+                                        <input type="date" class="form-control datetimepicker" max="3000-12-31"
+                                               min="<fmt:formatDate pattern = "yyyy-MM-dd" value = "${now}" />" />
                                     </div>
                                 </div>
                                 <div class="form-group col-md-2">
@@ -52,7 +53,8 @@
                                                 <span class="glyphicon glyphicon-calendar"><i class="fa fa-calendar" aria-hidden="true"></i></span>
                                             </span>
                                         </div>
-                                        <input type="text" class="form-control datetimepicker" />
+                                        <input class="form-control data-time-picker" type="date" name="deadline" max="3000-12-31"
+                                               min="<fmt:formatDate pattern = "yyyy-MM-dd" value = "${now}" />">
                                     </div>
                                 </div>
                                 <div class="form-group col-md-3">

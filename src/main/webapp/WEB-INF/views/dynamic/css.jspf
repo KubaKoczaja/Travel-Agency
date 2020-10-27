@@ -26,10 +26,6 @@
     <link href='<c:url value="/resources/demo/demo.css"/>' rel="stylesheet"/>
     <!-- Control Center for Paper Kit: parallax effects, scripts for the example pages etc -->
     <script src='<c:url value="/resources/js/paper-kit.js"/>' type="text/javascript"></script>
-    <script src='<c:url value="/resources/js/plugins/bootstrap-datepicker.js"/>' type="text/javascript"></script>
-    <script src='<c:url value="/resources/js/core/bootstrap.min.js"/>' type="text/javascript"></script>
-    <script src='<c:url value="/resources/js/core/jquery.min.js"/>' type="text/javascript"></script>
-    <script src='<c:url value="/resources/js/plugins/moment.min.js"/>' type="text/javascript"></script>
 
     <style>
         /* Chrome, Safari, Edge, Opera */
@@ -42,6 +38,13 @@
         /* Firefox */
         input[type=number] {
             -moz-appearance: textfield;
+        }
+
+        [type="date"]::-webkit-inner-spin-button {
+            display: none;
+        }
+        [type="date"]::-webkit-calendar-picker-indicator {
+            display: none;
         }
     </style>
 </head>
