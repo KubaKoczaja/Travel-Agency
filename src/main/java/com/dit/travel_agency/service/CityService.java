@@ -4,6 +4,8 @@ import com.dit.travel_agency.model.City;
 import com.dit.travel_agency.repository.CityRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CityService {
     private final CityRepository cityRepository;
@@ -12,7 +14,7 @@ public class CityService {
         this.cityRepository = cityRepository;
     }
 
-    public Iterable<City> getCityList() {
+    public List<City> getCityList() {
         return cityRepository.findAll();
     }
 }

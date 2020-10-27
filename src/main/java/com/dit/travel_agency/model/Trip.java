@@ -1,7 +1,6 @@
 package com.dit.travel_agency.model;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -11,29 +10,29 @@ import java.util.Date;
 @Table
 @Data
 @NoArgsConstructor
-@EqualsAndHashCode
+
 public class Trip {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name = "start_city_id")
     private City startCity;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name = "start_airport_id")
     private Airport startAirport;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name = "destination_city_id")
     private City destinationCity;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name = "destination_airport_id")
     private Airport destinationAirport;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name = "hotel_id")
     private Hotel hotel;
 

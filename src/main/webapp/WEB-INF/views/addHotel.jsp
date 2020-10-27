@@ -13,6 +13,7 @@
     <div class="filter"></div>
     <div class="container-fluid ">
         <center>
+            <form name="send" method="post" action='<c:url value="/addHotel"/>'>
             <div class="card col-lg-10">
                 <div class="card-header text-danger">
                     <h3>Dodaj Hotel</h3>
@@ -39,7 +40,6 @@
                                         <c:forEach items="${cities}" var="city">
                                             <option value="${city.id}">${city.cityName}</option>
                                         </c:forEach>
-<%--                                    <option>...</option>--%>
                                 </select>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                             <label for="inputDescription" class="col-sm-2 col-form-label">Opis hotelu</label>
                             <div class="col-sm-9">
                                 <textarea class="form-control" id="inputDescription" rows="3"
-                                          placeholder="Opis hotelu"></textarea>
+                                          placeholder="Opis hotelu" name="description"></textarea>
                             </div>
                         </div>
                         <fieldset>
@@ -61,8 +61,8 @@
                                                 <i class="fa fa-star"></i><i class="fa fa-star-o"></i><i
                                                     class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i
                                                     class="fa fa-star-o"></i>
-                                                <input class="form-check-input" type="radio" name="exampleRadios"
-                                                       id="oneStar" value="option1">
+                                                <input class="form-check-input" type="radio" name="stars"
+                                                       id="oneStar" value="1">
                                                 <span class="form-check-sign"></span>
                                             </label>
                                         </div>
@@ -71,8 +71,8 @@
                                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i
                                                     class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i
                                                     class="fa fa-star-o"></i>
-                                                <input class="form-check-input" type="radio" name="exampleRadios"
-                                                       id="twoStar" value="option2">
+                                                <input class="form-check-input" type="radio" name="stars"
+                                                       id="twoStar" value="2">
                                                 <span class="form-check-sign"></span>
                                             </label>
                                         </div>
@@ -81,8 +81,8 @@
                                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i
                                                     class="fa fa-star"></i><i class="fa fa-star-o"></i><i
                                                     class="fa fa-star-o"></i>
-                                                <input class="form-check-input" type="radio" name="exampleRadios"
-                                                       id="threeStar" value="option3">
+                                                <input class="form-check-input" type="radio" name="stars"
+                                                       id="threeStar" value="3">
                                                 <span class="form-check-sign"></span>
                                             </label>
                                         </div>
@@ -91,8 +91,8 @@
                                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i
                                                     class="fa fa-star"></i><i class="fa fa-star"></i><i
                                                     class="fa fa-star-o"></i>
-                                                <input class="form-check-input" type="radio" name="exampleRadios"
-                                                       id="fourStar" value="option4">
+                                                <input class="form-check-input" type="radio" name="stars"
+                                                       id="fourStar" value="4">
                                                 <span class="form-check-sign"></span>
                                             </label>
                                         </div>
@@ -101,8 +101,8 @@
                                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i
                                                     class="fa fa-star"></i><i class="fa fa-star"></i><i
                                                     class="fa fa-star"></i>
-                                                <input class="form-check-input" type="radio" name="exampleRadios"
-                                                       id="fiveStar" value="option5">
+                                                <input class="form-check-input" type="radio" name="stars"
+                                                       id="fiveStar" value="5">
                                                 <span class="form-check-sign"></span>
                                             </label>
                                         </div>
@@ -152,7 +152,7 @@
                                 <label for="inputDescription" class="col-sm-2 col-form-label">Dodaj zdjecie</label>
                                 <form class="was-validated">
                                     <div class="custom-file col-sm-4">
-                                        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                                        <input type="file" class="custom-file-input" id="validatedCustomFile">
                                         <label class="custom-file-label" for="validatedCustomFile">Wybierz
                                             plik...</label>
                                     </div>
@@ -160,11 +160,12 @@
                             </div>
                         </fieldset>
                         <div class="form-group row">
-                            <button type="button" class="btn btn-danger btn-lg btn-block">Dodaj Hotel</button>
+                            <button type="submit" class="btn btn-danger btn-lg btn-block">Dodaj Hotel</button>
                         </div>
                     </form>
                 </div>
             </div>
+            </form>
         </center>
     </div>
 </div>

@@ -2,36 +2,40 @@ package com.dit.travel_agency.controller;
 
 import com.dit.travel_agency.model.City;
 import com.dit.travel_agency.model.Hotel;
-import com.dit.travel_agency.repository.CityRepository;
-import com.dit.travel_agency.repository.HotelRepository;
 import com.dit.travel_agency.service.CityService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.dit.travel_agency.service.HotelService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
-import java.util.Set;
 
 @Controller
 public class Hotels {
+    private final CityService cityService;
+    private final HotelService hotelService;
 
-    @Autowired
-    HotelRepository hotelRepository;
+    public Hotels(CityService cityService, HotelService hotelService) {
+        this.cityService = cityService;
+        this.hotelService = hotelService;
+    }
 
-    @Autowired
-    CityRepository cityRepository;
-
-    @Autowired
-    CityService cityService;
 
     @RequestMapping(value = {"/addHotel"}, method = RequestMethod.GET)
     public String viewAddHotel(Model model) {
-        Iterable<Hotel> list = hotelRepository.findAll();
-        Iterable<City> cityList = cityService.getCityList();
-        model.addAttribute("hotel", list);
+        List<Hotel> hotelList = hotelService.getHotelList();
+        List<City> cityList = cityService.getCityList();
+        model.addAttribute("hotels", hotelList);
         model.addAttribute("cities", cityList);
         return "/addHotel";
+    }
+
+    @PostMapping("/addHotel")
+    public RedirectView postAddHotel(Hotel hotel) {
+        hotelService.addHotel(hotel);
+        return new RedirectView("/addHotel");
     }
 }

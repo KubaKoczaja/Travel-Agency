@@ -1,37 +1,35 @@
 package com.dit.travel_agency.model;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table
 @Data
 @NoArgsConstructor
-@EqualsAndHashCode
+
 public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String cityName;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name = "country_id")
     private Country country;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "city")
-    private Set<Hotel> hotelSet;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "city")
+    private List<Hotel> hotelList;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "city")
-    private Set<Airport> airportSet;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "city")
+    private List<Airport> airportList;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "startCity")
-    private Set<Trip> tripStartSet;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "startCity")
+    private List<Trip> tripStartList;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "destinationCity")
-    private Set<Trip> tripDestinationSet;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "destinationCity")
+    private List<Trip> tripDestinationList;
 }
