@@ -12,6 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 
 public class Hotel {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,11 +20,9 @@ public class Hotel {
     private Integer stars;
     @Column(length = 3000)
     private String description;
-
     @ManyToOne
     @JoinColumn(name = "city_id")
     private City city;
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "hotel")
+    @OneToMany(mappedBy = "hotel")
     private List<Trip> tripList;
 }
