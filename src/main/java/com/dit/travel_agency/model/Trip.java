@@ -2,6 +2,7 @@ package com.dit.travel_agency.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -36,8 +37,12 @@ public class Trip {
     @JoinColumn(name = "hotel_id")
     private Hotel hotel;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date departureDate;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date returnDate;
+
     private Integer numberOfDays;
     private Double adultPrice;
     private Double childPrice;
