@@ -36,6 +36,20 @@ public class Hotels {
     @PostMapping("/addHotel")
     public RedirectView postAddHotel(Hotel hotel) {
         hotelService.addHotel(hotel);
-        return new RedirectView("/addHotel");
+        return new RedirectView("/home");
+    }
+
+    @RequestMapping(value = {"/hotels"}, method = RequestMethod.GET)
+    public String viewHotelsList(Model model) {
+        List<Hotel> hotelList = hotelService.getHotelList();
+        model.addAttribute("hotels", hotelList);
+        return "/hotels";
+    }
+
+    @RequestMapping(value = {"/hotelList"}, method = RequestMethod.GET)
+    public String viewHotelsList2(Model model) {
+        List<Hotel> hotelList = hotelService.getHotelList();
+        model.addAttribute("hotels", hotelList);
+        return "/hotelList";
     }
 }

@@ -44,6 +44,6 @@ public class Trips {
     @PostMapping("/addTrip")
     public RedirectView postAddTrip(Trip trip) {
         tripService.addTrip(trip);
-        return new RedirectView("/addTrip");
+        return new RedirectView("/home");
     }
 }
