@@ -1,7 +1,6 @@
 package com.dit.travel_agency.model;
 
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -23,9 +22,9 @@ public class Airport {
     @JoinColumn(name = "city_id")
     private City city;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "startAirport")
+    @OneToMany(mappedBy = "startAirport")
     private List<Trip> tripStartList;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "destinationAirport")
+    @OneToMany(mappedBy = "destinationAirport")
     private List<Trip> tripDestinationList;
 }

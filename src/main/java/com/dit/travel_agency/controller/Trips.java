@@ -12,6 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
@@ -45,5 +47,12 @@ public class Trips {
     public RedirectView postAddTrip(Trip trip) {
         tripService.addTrip(trip);
         return new RedirectView("/home");
+    }
+
+    @RequestMapping(value = {"/tripList"}, method = RequestMethod.GET)
+    public String viewTripList(Model model) {
+        List<Trip> tripList = tripService.getTripList();
+        model.addAttribute("trips", tripList);
+        return "tripList";
     }
 }

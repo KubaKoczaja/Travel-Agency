@@ -20,6 +20,6 @@ public class Country {
     @JoinColumn(name = "continent_id")
     private Continent continent;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "country")
+    @OneToMany(mappedBy = "country")
     private List<City> cityList;
 }

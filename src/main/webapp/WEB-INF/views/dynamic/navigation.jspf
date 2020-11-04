@@ -21,7 +21,7 @@
                     <a href='<c:url value="#"/>' class="nav-link">Hotele</a>
                 </li>
                 <li class="nav-item">
-                    <a href='<c:url value="#"/>' class="nav-link">Wycieczki</a>
+                    <a href='<c:url value="/tripList"/>' class="nav-link">Wycieczki</a>
                 </li>
                 <li class="nav-item">
                     <a href='<c:url value="#"/>' class="nav-link">O nas</a>
@@ -36,7 +36,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href='<c:url value="#"/>'>Profil</a>
-                        <a href='<c:url value="#"/>' class="dropdown-item text-danger">Dodaj hotel</a>
+                        <a href='<c:url value="/addHotel"/>' class="dropdown-item text-danger">Dodaj hotel</a>
                     </div>
                 </li>
 

@@ -16,6 +16,6 @@ public class Continent {
     private Long id;
     private String continentName;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "continent")
+    @OneToMany(mappedBy = "continent")
     private List<Country> countryList;
 }

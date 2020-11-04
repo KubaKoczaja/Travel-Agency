@@ -22,15 +22,15 @@ public class City {
     @JoinColumn(name = "country_id")
     private Country country;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "city")
+    @OneToMany(mappedBy = "city")
     private List<Hotel> hotelList;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "city")
+    @OneToMany(mappedBy = "city")
     private List<Airport> airportList;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "startCity")
+    @OneToMany(mappedBy = "startCity")
     private List<Trip> tripStartList;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "destinationCity")
+    @OneToMany(mappedBy = "destinationCity")
     private List<Trip> tripDestinationList;
 }
