@@ -14,6 +14,10 @@ public class TripService {
         this.tripRepository = tripRepository;
     }
 
+    public Trip getTrip(Long id) {
+        return tripRepository.findById(id).orElse(null);
+    }
+
     public void addTrip(Trip newTrip) {
         tripRepository.save(newTrip);
     }

@@ -224,7 +224,7 @@
 
                 <div class="col-lg-9">
                     <c:forEach items="${trips}" var="trip">
-                        <a href="#" class="row rounded-right border" style="margin-bottom: 25px;">
+                        <a href='<c:url value="/hotelView/${trip.id}"/>' class="row rounded-right border" style="margin-bottom: 25px;">
                             <div class="col-lg-4" style="padding: 0;">
                                 <img src="<c:url value='https://i.wakacje.pl/no-index/hotel/polska/lenart-obiekt-budynek-glowny-828628360-295-267.jpg'/>"
                                      class="img-rounded img-no-padding img-responsive" alt="Hotel">

@@ -10,10 +10,7 @@ import com.dit.travel_agency.service.HotelService;
 import com.dit.travel_agency.service.TripService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
@@ -49,10 +46,17 @@ public class Trips {
         return new RedirectView("/home");
     }
 
-    @RequestMapping(value = {"/tripList"}, method = RequestMethod.GET)
+    @GetMapping("/tripList")
     public String viewTripList(Model model) {
         List<Trip> tripList = tripService.getTripList();
         model.addAttribute("trips", tripList);
         return "tripList";
+    }
+
+    @GetMapping("/hotelView/{id}")
+    public String getHotelView(Model model, @PathVariable String id) {
+        Trip trip = tripService.getTrip(Long.valueOf(id));
+        model.addAttribute("trip", trip);
+        return "hotelView";
     }
 }
