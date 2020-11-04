@@ -22,7 +22,8 @@
                             <div class="row">
                                 <label class="col-sm-2 col-form-label">Odlot z</label>
                                 <div class="form-group col-md-2">
-                                    <select id="inputCityFrom" class="form-control" name="startCity.id">
+                                    <select id="inputCityFrom" class="form-control" name="startCity.id"
+                                            onchange="activateInputAirportFrom()">
                                         <option hidden>Wybierz miasto</option>
                                         <c:forEach items="${cities}" var="city">
                                         <option value="${city.id}">${city.cityName}</option>
@@ -43,7 +44,8 @@
                             <div class="row">
                                 <label class="col-sm-2 col-form-label">Podróż do</label>
                                 <div class="form-group col-md-2">
-                                    <select id="inputCityTo" class="form-control" name="destinationCity.id">
+                                    <select id="inputCityTo" class="form-control" name="destinationCity.id"
+                                            onchange="activateInputAirportTo()">
                                         <option hidden>Wybierz miasto</option>
                                         <c:forEach items="${cities}" var="city">
                                         <option value="${city.id}">${city.cityName}</option>
@@ -51,7 +53,8 @@
                                     </select>
                                 </div>
                                 <div class="form-group col-md-2">
-                                    <select id="inputAirportTo" class="form-control" name="destinationAirport.id">
+                                    <select id="inputAirportTo" class="form-control" name="destinationAirport.id"
+                                            onchange="activateInputHotel()">
                                         <option hidden>Wybierz lotnisko</option>
                                         <c:forEach items="${airports}" var="airport">
                                         <option value="${airport.id}">${airport.airportName}</option>
