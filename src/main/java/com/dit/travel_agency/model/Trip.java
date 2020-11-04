@@ -37,6 +37,10 @@ public class Trip {
     @JoinColumn(name = "hotel_id")
     private Hotel hotel;
 
+    @ManyToOne
+    @JoinColumn(name = "trip_purchase_id")
+    private TripPurchase tripPurchase;
+
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date departureDate;
 

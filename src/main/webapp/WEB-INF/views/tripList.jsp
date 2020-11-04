@@ -155,15 +155,15 @@
                         <h6 class="pb-1 pt-2">Standard hotelu</h6>
                         <div class="form-check-radio">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" id="anyStandard" value="option1"> Dowolny
+                                <input name="standard" class="form-check-input" type="radio" id="anyStandard" value="option1"> Dowolny
                                 <span class="form-check-sign"></span>
                             </label>
                         </div>
                         <div class="form-check-radio">
-                            <label class="form-check-label">
+                            <label for class="form-check-label">
                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
                                     class="fa fa-star"></i><i class="fa fa-star"></i>
-                                <input class="form-check-input" type="radio" id="fiveStars" value="option2">
+                                <input name="standard" class="form-check-input" type="radio" id="fiveStars" value="option2">
                                 <span class="form-check-sign"></span>
                             </label>
                         </div>
@@ -171,7 +171,7 @@
                             <label class="form-check-label">
                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
                                     class="fa fa-star"></i><i class="fa fa-star-o"></i>
-                                <input class="form-check-input" type="radio" id="fourStars" value="option2">
+                                <input name="standard" class="form-check-input" type="radio" id="fourStars" value="option2">
                                 <span class="form-check-sign"> (i więcej)</span>
                             </label>
                         </div>
@@ -179,7 +179,7 @@
                             <label class="form-check-label">
                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
                                     class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-                                <input class="form-check-input" type="radio" id="threeStars" value="option2">
+                                <input name="standard" class="form-check-input" type="radio" id="threeStars" value="option2">
                                 <span class="form-check-sign"> (i więcej)</span>
                             </label>
                         </div>
@@ -187,7 +187,7 @@
                             <label class="form-check-label">
                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i
                                     class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-                                <input class="form-check-input" type="radio" id="twoStars" value="option2">
+                                <input name="standard" class="form-check-input" type="radio" id="twoStars" value="option2">
                                 <span class="form-check-sign"> (i więcej)</span>
                             </label>
                         </div>
