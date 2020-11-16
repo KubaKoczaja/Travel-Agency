@@ -1,7 +1,9 @@
 package com.dit.travel_agency.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 
@@ -9,6 +11,8 @@ import javax.persistence.*;
 @Table
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
+
 
 public class Participant {
     @Id
@@ -22,6 +26,15 @@ public class Participant {
     private String firstname;
     private String lastname;
     private String passportNumber;
-    private Boolean isAdult;
+    private String isAdult;
 
+    @Override
+    public String toString() {
+        return "Participant{" +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", passportNumber='" + passportNumber + '\'' +
+                ", isAdult='" + isAdult + '\'' +
+                '}';
+    }
 }

@@ -16,13 +16,22 @@ public class TripPurchase {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany(mappedBy = "tripPurchase")
-    private List<Trip> trips;
+    @ManyToOne
+    @JoinColumn(name = "trip_id")
+    private Trip trip;
 
     @OneToMany(mappedBy = "tripPurchase")
     private List<Participant> participants;
 
     private Double totalPrice;
+    private Integer numberOfAdultParticipants;
+    private Integer numberOfChildParticipants;
 
+//public Double getTotalPrice() {
+//    return (trip.getAdultPrice() * getNumberOfAdultParticipants()) + (trip.getChildPrice() * getNumberOfChildParticipants());
+//}
 
+public void setTotalPrice() {
+    this.totalPrice = (trip.getAdultPrice() * getNumberOfAdultParticipants()) + (trip.getChildPrice() * getNumberOfChildParticipants());
+}
 }

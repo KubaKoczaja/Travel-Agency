@@ -15,4 +15,8 @@ public class TripPurchaseService {
     public void addTripPurchase(TripPurchase tripPurchase) {
         tripPurchaseRepository.save(tripPurchase);
     }
+
+    public TripPurchase getTripPurchaseById(Long id) {
+        return tripPurchaseRepository.findById(id).orElse(null);
+    }
 }

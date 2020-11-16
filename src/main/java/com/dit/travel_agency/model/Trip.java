@@ -6,6 +6,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table
@@ -37,9 +38,8 @@ public class Trip {
     @JoinColumn(name = "hotel_id")
     private Hotel hotel;
 
-    @ManyToOne
-    @JoinColumn(name = "trip_purchase_id")
-    private TripPurchase tripPurchase;
+    @OneToMany(mappedBy = "trip")
+    private List<TripPurchase> tripPurchaseList;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date departureDate;
