@@ -16,7 +16,7 @@
     <div class="container">
         <div style="color: black; margin-top: 8px">
             <p style="font-size: 50px; font-weight: 800; margin-bottom: 0;">
-                <b>Nazwa Hotelu</b>
+                <b>${trip.hotel.hotelName}</b>
             </p>
             <span style="color: #FFCC00; font-size: 18px;"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
                     class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
@@ -317,6 +317,7 @@
                     <!-- Grid row -->
                 </div>
                 <div class="col-lg-4 card pt-3 border">
+                    <form name="send" method="post" action='<c:url value="/tripPurchase"/>'>
                     <div class="input-group">
                         <div class="input-group-prepend">
                                             <span class="input-group-text">
@@ -324,9 +325,22 @@
                                                         class="fa fa-user"></i></span>
                                             </span>
                         </div>
-                        <input type="number" name="CalculatorPerson" readonly="" class="form-control"
-                               placeholder="Liczba osób"/>
+                        <input type="number" id="CalculatorAdults" name="numberOfAdultParticipants" class="form-control"
+                               min=1 placeholder="Podaj liczbę osób dorosłych" oninput="checkPassengersNumber()"/>
                     </div>
+                    <div class="input-group pt-2">
+                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <span class="glyphicon glyphicon-calendar"><i
+                                                        class="fa fa-user"></i></span>
+                                            </span>
+                        </div>
+                        <input type="number" id="CalculatorChildren" name="numberOfChildParticipants" class="form-control"
+                               min=0 placeholder="Podaj liczbę dzieci" oninput="checkPassengersNumber()"/>
+                    </div>
+
+                        <input type="hidden" name="totalPrice" id="totalPrice" value="" oninput="getTotalPrice()">
+                        <input type="hidden" name="trip.id" value="${trip.id}">
                     <div class="input-group pt-2" id="startdate">
                         <div class="input-group-prepend">
                                             <span class="input-group-text">
@@ -366,19 +380,20 @@
                                                                                               aria-hidden="true"></i></span>
                                             </span>
                         </div>
-                        <input name="CalculatorService" disabled="" readonly="" unselectable="on" class="form-control"
+                        <input name="CalculatorService" disabled unselectable="on" class="form-control"
                                value="${trip.catering}">
                     </div>
+
                     <div class="text-center">
                         <div class="mt-2">
                             <h6 style="color: black; font-size: 22px; padding-bottom: 0px; margin-bottom: 0px;">
                                 Cena</h6>
                             <p style="color: black; font-size: 12px; "><b><fmt:formatNumber
-                                    maxFractionDigits="0" value="${trip.adultPrice}"/></b>za osobę</p>
+                                    maxFractionDigits="0" value="${trip.adultPrice}"/></b> za osobę</p>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-warning btn-round mt-2 mb-3">Zarezerwuj</button>
-
+                    <button type="submit" class="btn btn-warning btn-round mt-2 mb-3">Zarezerwuj</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -390,5 +405,26 @@
 </div>
 <%@include file="dynamic/footer.jspf" %>
 <%@include file="dynamic/js.jspf" %>
+<script>
+    function checkPassengersNumber() {
+
+        if (document.getElementById("CalculatorAdults").value > ${trip.numberOfAdults}) {
+            alert("Nie ma wystarczającej ilości miejsc dla osób dorosłych");
+            document.getElementById("CalculatorAdults").value = 1;
+        }
+        if (document.getElementById("CalculatorChildren").value > ${trip.numberOfChildren}) {
+            alert("Nie ma wystarczającej ilości miejsc dla dzieci");
+            document.getElementById("CalculatorChildren").value = 1;
+        }
+    }
+    function getTotalPrice() {
+        <%--document.getElementById("totalPrice").setAttribute("value",document.getElementById("CalculatorAdults").value * ${trip.numberOfAdults} +--%>
+        <%--    document.getElementById("CalculatorChildren").value * ${trip.numberOfChildren});--%>
+        document.getElementById("totalPrice").value =
+            document.getElementById("CalculatorAdults").value * ${trip.numberOfAdults} +
+            document.getElementById("CalculatorChildren").value * ${trip.numberOfChildren};
+        alert(document.getElementById("totalPrice").value);
+    }
+</script>
 </body>
 </html>

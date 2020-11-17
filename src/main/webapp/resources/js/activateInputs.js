@@ -18,3 +18,4 @@ var inputAirportFrom = document.getElementById("inputAirportFrom");
     function activateInputHotel() {
       inputHotel.removeAttribute("disabled");
     }
+
