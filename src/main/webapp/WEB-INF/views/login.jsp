@@ -27,12 +27,12 @@
                 <i class="fa fa-twitter"></i>
               </a>
             </div>
-            <form class="register-form">
+            <form class="register-form" name="login" method="post" action='<c:url value="/login"/>'>
               <label>Email</label>
-              <input type="text" class="form-control" placeholder="Email">
+              <input type="text" class="form-control" placeholder="Email" name="username">
               <label>Hasło</label>
-              <input type="password" class="form-control" placeholder="Hasło">
-              <button class="btn btn-danger btn-block btn-round">Zaloguj</button>
+              <input type="password" class="form-control" placeholder="Hasło" name="password">
+              <input type="submit" class="btn btn-danger btn-block btn-round" value="Zaloguj">
             </form>
             <div class="forgot">
               <a href="#" class="btn btn-link btn-danger">Zapomniałeś hasła?</a>
