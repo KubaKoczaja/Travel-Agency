@@ -17,19 +17,19 @@
           <div class="card card-register">
             <h3 class="title mx-auto">Witaj! </h3>
             <div class="social-line text-center">
-              <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon">
+              <a href="#facebook" class="btn btn-neutral btn-facebook btn-just-icon">
                 <i class="fa fa-facebook-square"></i>
               </a>
-              <a href="#pablo" class="btn btn-neutral btn-google btn-just-icon">
+              <a href="#google" class="btn btn-neutral btn-google btn-just-icon">
                 <i class="fa fa-google-plus"></i>
               </a>
-              <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
+              <a href="#twitter" class="btn btn-neutral btn-twitter btn-just-icon">
                 <i class="fa fa-twitter"></i>
               </a>
             </div>
             <form class="register-form" name="login" method="post" action='<c:url value="/login"/>'>
               <label>Email</label>
-              <input type="text" class="form-control" placeholder="Email" name="username">
+              <input type="email" class="form-control" placeholder="Email" name="username">
               <label>Hasło</label>
               <input type="password" class="form-control" placeholder="Hasło" name="password">
               <input type="submit" class="btn btn-danger btn-block btn-round" value="Zaloguj">
@@ -45,7 +45,7 @@
       <h6>©
         <script>
           document.write(new Date().getFullYear())
-        </script>, made with <i class="fa fa-heart heart"></i> by Creative Tim</h6>
+        </script>, made with <i class="fa fa-heart heart"></i> by Jakub Wiejak & Jakub Koczaja</h6>
     </div>
   </div>
   <%@include file="dynamic/js.jspf"%>
