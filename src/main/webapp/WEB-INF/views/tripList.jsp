@@ -139,7 +139,7 @@
                         </div>
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" value=""> HB - śniadania i objadokolacje
+                                <input class="form-check-input" type="checkbox" value=""> HB - śniadania i obiadokolacje
                                 <span class="form-check-sign"></span>
                             </label>
                         </div>
