@@ -116,19 +116,19 @@
                                     </ol>
                                     <div class="carousel-inner" role="listbox">
                                         <div class="carousel-item active">
-                                            <img class="d-block img-fluid" src="./assets/img/soroush-karimi.jpg" alt="First slide">
+                                            <img class="d-block img-fluid" src='<c:url value="/resources/img/soroush-karimi.jpg"/>' alt="First slide">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <p>Somewhere</p>
                                             </div>
                                         </div>
                                         <div class="carousel-item">
-                                            <img class="d-block img-fluid" src="./assets/img/federico-beccari.jpg" alt="Second slide">
+                                            <img class="d-block img-fluid" src='<c:url value="/resources/img/federico-beccari.jpg"/>' alt="Second slide">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <p>Somewhere else</p>
                                             </div>
                                         </div>
                                         <div class="carousel-item">
-                                            <img class="d-block img-fluid" src="./assets/img/joshua-stannard.jpg" alt="Third slide">
+                                            <img class="d-block img-fluid" src='<c:url value="/resources/img/joshua-stannard.jpg"/>' alt="Third slide">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <p>Here it is</p>
                                             </div>
@@ -164,19 +164,19 @@
                                     </ol>
                                     <div class="carousel-inner" role="listbox">
                                         <div class="carousel-item active">
-                                            <img class="d-block img-fluid" src="./assets/img/soroush-karimi.jpg" alt="First slide">
+                                            <img class="d-block img-fluid" src='<c:url value="/resources/img/soroush-karimi.jpg"/>' alt="First slide">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <p>Somewhere</p>
                                             </div>
                                         </div>
                                         <div class="carousel-item">
-                                            <img class="d-block img-fluid" src="./assets/img/federico-beccari.jpg" alt="Second slide">
+                                            <img class="d-block img-fluid" src='<c:url value="/resources/img/federico-beccari.jpg"/>' alt="Second slide">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <p>Somewhere else</p>
                                             </div>
                                         </div>
                                         <div class="carousel-item">
-                                            <img class="d-block img-fluid" src="./assets/img/joshua-stannard.jpg" alt="Third slide">
+                                            <img class="d-block img-fluid" src='<c:url value="/resources/img/joshua-stannard.jpg"/>' alt="Third slide">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <p>Here it is</p>
                                             </div>
@@ -212,19 +212,19 @@
                                     </ol>
                                     <div class="carousel-inner" role="listbox">
                                         <div class="carousel-item active">
-                                            <img class="d-block img-fluid" src="./assets/img/soroush-karimi.jpg" alt="First slide">
+                                            <img class="d-block img-fluid" src='<c:url value="/resources/img/soroush-karimi.jpg"/> alt="First slide">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <p>Somewhere</p>
                                             </div>
                                         </div>
                                         <div class="carousel-item">
-                                            <img class="d-block img-fluid" src="./assets/img/federico-beccari.jpg" alt="Second slide">
+                                            <img class="d-block img-fluid" src='<c:url value="/resources/img/federico-beccari.jpg"/>' alt="Second slide">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <p>Somewhere else</p>
                                             </div>
                                         </div>
                                         <div class="carousel-item">
-                                            <img class="d-block img-fluid" src="./assets/img/joshua-stannard.jpg" alt="Third slide">
+                                            <img class="d-block img-fluid" src='<c:url value="/resources/img/joshua-stannard.jpg"/>' alt="Third slide">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <p>Here it is</p>
                                             </div>
