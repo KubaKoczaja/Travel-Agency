@@ -30,13 +30,14 @@
                     <a href='<c:url value="#"/>' class="nav-link">Kontakt</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href='<c:url value="#"/>' id="navbarDropdownMenuLink" role="button"
+                    <a class="nav-link dropdown-toggle" href='<c:url value="/login"/>' id="navbarDropdownMenuLink" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Zaloguj się
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href='<c:url value="#"/>'>Profil</a>
+                        <a class="dropdown-item" href='<c:url value="/login"/>'>Profil</a>
                         <a href='<c:url value="/addHotel"/>' class="dropdown-item text-danger">Dodaj hotel</a>
+                        <a href='<c:url value="/addTrip"/>' class="dropdown-item text-danger">Dodaj wycieczkę</a>
                     </div>
                 </li>
 

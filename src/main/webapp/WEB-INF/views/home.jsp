@@ -26,7 +26,7 @@
                                                 <span class="glyphicon glyphicon-calendar"><i class="fa fa-map-marker"></i></span>
                                             </span>
                                         </div>
-                                    <input type="email" class="form-control" id="hotel" placeholder="Dowolnie" />
+                                    <input type="text" class="form-control" id="hotel" name="hotel" placeholder="Dowolnie" />
                                     </div>
                                 </div>
                                 <div class="form-group col-md-2">
@@ -39,7 +39,7 @@
                                                 <span class="glyphicon glyphicon-calendar"><i class="fa fa-calendar"></i></span>
                                             </span>
                                         </div>
-                                        <input type="date" class="form-control datetimepicker" max="3000-12-31"
+                                        <input type="date" class="form-control datetimepicker" name="startDate" max="3000-12-31"
                                                min="<fmt:formatDate pattern = "yyyy-MM-dd" value = "${now}" />" />
                                     </div>
                                 </div>
@@ -53,7 +53,7 @@
                                                 <span class="glyphicon glyphicon-calendar"><i class="fa fa-calendar" aria-hidden="true"></i></span>
                                             </span>
                                         </div>
-                                        <input class="form-control data-time-picker" type="date" name="deadline" max="3000-12-31"
+                                        <input class="form-control data-time-picker" type="date" name="backDate" max="3000-12-31"
                                                min="<fmt:formatDate pattern = "yyyy-MM-dd" value = "${now}" />">
                                     </div>
                                 </div>
@@ -67,7 +67,7 @@
                                                 <span class="glyphicon glyphicon-calendar"><i class="fa fa-plane"></i></span>
                                             </span>
                                         </div>
-                                    <input type="email" class="form-control" id="startFrom" placeholder="Dowolnie" />
+                                    <input type="text" class="form-control" id="startFrom" placeholder="Dowolnie" />
                                     </div>
                                 </div>
                                 <div class="form-group col-md-2">
@@ -80,7 +80,7 @@
                                                 <span class="glyphicon glyphicon-calendar"><i class="fa fa-user"></i></span>
                                             </span>
                                         </div>
-                                    <input type="email" class="form-control" id="member" placeholder="1 dorosły" />
+                                    <input type="text" class="form-control" id="member" name="member" placeholder="1 dorosły" />
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Szukaj</button>

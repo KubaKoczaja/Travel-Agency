@@ -154,40 +154,40 @@
                     <div class="border-bottom">
                         <h6 class="pb-1 pt-2">Standard hotelu</h6>
                         <div class="form-check-radio">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="radio" id="anyStandard" value="option1"> Dowolny
+                            <label class="form-check-label" for="anyStandard">
+                                <input class="form-check-input" type="radio" id="anyStandard" name="Standard" value="option1"> Dowolny
                                 <span class="form-check-sign"></span>
                             </label>
                         </div>
                         <div class="form-check-radio">
-                            <label class="form-check-label">
+                            <label class="form-check-label" for="fiveStars">
                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
                                     class="fa fa-star"></i><i class="fa fa-star"></i>
-                                <input class="form-check-input" type="radio" id="fiveStars" value="option2">
+                                <input class="form-check-input" type="radio" id="fiveStars" name="Standard" value="option2">
                                 <span class="form-check-sign"></span>
                             </label>
                         </div>
                         <div class="form-check-radio">
-                            <label class="form-check-label">
+                            <label class="form-check-label" for="fourStars">
                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
                                     class="fa fa-star"></i><i class="fa fa-star-o"></i>
-                                <input class="form-check-input" type="radio" id="fourStars" value="option2">
+                                <input class="form-check-input" type="radio" id="fourStars" name="Standard" value="option3">
                                 <span class="form-check-sign"> (i więcej)</span>
                             </label>
                         </div>
                         <div class="form-check-radio">
-                            <label class="form-check-label">
+                            <label class="form-check-label" for="threeStars">
                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
                                     class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-                                <input class="form-check-input" type="radio" id="threeStars" value="option2">
+                                <input class="form-check-input" type="radio" id="threeStars" name="Standard" value="option4">
                                 <span class="form-check-sign"> (i więcej)</span>
                             </label>
                         </div>
                         <div class="form-check-radio">
-                            <label class="form-check-label">
+                            <label class="form-check-label" for="twoStars">
                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i
                                     class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-                                <input class="form-check-input" type="radio" id="twoStars" value="option2">
+                                <input class="form-check-input" type="radio" id="twoStars" name="Standard" value="option5">
                                 <span class="form-check-sign"> (i więcej)</span>
                             </label>
                         </div>
@@ -209,13 +209,13 @@
                         </div>
                         <div class="form-check-radio">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" id="priceForPerson" value="option2">
+                                <input class="form-check-input" type="radio" id="priceForPerson" name="Price" value="option2">
                                 <span class="form-check-sign">Cena za osobę</span>
                             </label>
                         </div>
                         <div class="form-check-radio">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" id="priceForWhole" value="option2">
+                                <input class="form-check-input" type="radio" id="priceForWhole" name="Price" value="option2">
                                 <span class="form-check-sign">Cena za wszystkich</span>
                             </label>
                         </div>
@@ -261,7 +261,7 @@
                                     <h6 style="color: black; font-size: 22px; padding-bottom: 0px; margin-bottom: 0px; text-align: right">
                                         Cena</h6>
                                     <p style="color: black; font-size: 12px; text-align: right"><b><fmt:formatNumber
-                                            maxFractionDigits="0" value="${trip.adultPrice}"/></b> złotych za osobę</p>
+                                            maxFractionDigits="0" value="${trip.adultPrice}"/></b> zł za osobę</p>
                                 </div>
                             </div>
                         </a>
