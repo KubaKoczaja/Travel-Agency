@@ -37,7 +37,7 @@
                                     </div>
                                     <div class="form-group col-md-2">
                                         <select id="inputCity" class="form-control" name="city.id">
-                                            <option hidden>wybierz miasto</option>
+                                            <option hidden>Wybierz miasto</option>
                                             <c:forEach items="${cities}" var="city">
                                                 <option value="${city.id}">${city.cityName}</option>
                                             </c:forEach>
@@ -111,17 +111,6 @@
                                         </div>
                                     </div>
                                 </fieldset>
-                                <div class="form-group row">
-                                    <label for="inputHotelName" class="col-sm-2 col-form-label">Cena za osobę</label>
-                                    <div class="col-sm-2">
-                                        <input type="number" class="form-control" id="inputAdultPrice" min="0"
-                                               placeholder="Osoba dorosła">
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <input type="number" class="form-control" id="inputChildPrice" min="0"
-                                               placeholder="Dziecko">
-                                    </div>
-                                </div>
                                 <fieldset class="form-group">
                                     <div class="row">
                                         <label for="inputDescription" class="col-sm-2 col-form-label pt-0">Typ
