@@ -30,7 +30,7 @@
                     <a href='<c:url value="#"/>' class="nav-link">Kontakt</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href='<c:url value="#"/>' id="navbarDropdownMenuLink" role="button"
+                    <a class="nav-link dropdown-toggle" href='<c:url value="/login"/>' id="navbarDropdownMenuLink" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Zaloguj się
                     </a>
